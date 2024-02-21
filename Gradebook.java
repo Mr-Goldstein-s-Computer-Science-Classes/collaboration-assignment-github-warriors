@@ -19,5 +19,32 @@ public class Gradebook {
        assignments.add(assignment);
     }
     public void gradeAssignment(String assignment,String studentName, double grade)
+    {
+
+    }
+    public double getAverageGrade(String assignment)
+    {
+
+    }
+    public getMinimumGrade(String assignment)
+    {
+
+    }
+    public double getMaximumGrade(String assignment)
+    {
+
+    }
+    public double getAverageOverall()
+    {
+
+    }
+    public double getMaxOverall()
+    {
+
+    }
+    public double getMinOverall
+
+
+
 
 }
