@@ -1,5 +1,9 @@
 public class Student {
 
+    private String name;
+    private String[] assignment;
+    private double[] assignmentGrades;
+
     public Student(String name)
     {
 
@@ -20,10 +24,10 @@ public class Student {
 
     public double getOverallGrade()
     {
-
+ 
     }
     public String toString()
     {
-
+        return name + " - Average Grade: " + getOverallGrade();
     }
 }
