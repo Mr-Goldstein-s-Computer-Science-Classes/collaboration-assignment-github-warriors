@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 public class Student {
-
+    private String name;
     private List<String> assignments = new ArrayList<String>();
     private List<Double> assignmentGrades = new ArrayList<Double>();
     public Student(String name)
