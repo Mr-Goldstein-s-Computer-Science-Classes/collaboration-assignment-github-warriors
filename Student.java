@@ -14,7 +14,7 @@ public class Student {
         assignmentGrades.add(null);
 
     }
-    public void gradeAssignments(String assignment, double grade)
+    public void gradeAssignment(String assignment, double grade)
     {
         int index = assignments.indexOf(assignment);
         if (index != -1) {
@@ -23,7 +23,7 @@ public class Student {
 
     }
 
-    public double getAssignment(String assignment)
+    public double getAssignmentGrade(String assignment)
     {
     int index = assignments.indexOf(assignment);
         if (index != -1 && assignmentGrades.get(index) != null) {
