@@ -1,25 +1,33 @@
 import java.util.ArrayList;
+import java.util.List;
 public class Gradebook {
-    private String studentName;
 
-    private double grade;
+    private List<Student> students = new ArrayList<Student>();
     private ArrayList<String> assignments = new ArrayList<String>();
-    private ArrayList<Student> grades = new ArrayList<Student>();
     public Gradebook()
     {
 
     }
     public void createStudent(String name)
     {
-        Student students = new Student(name);
+        students.add(new Student(name));
     }
 
     public void addAssignment(String assignment)
     {
-       assignments.add(assignment);
+        assignments.add(assignment);
+        for(Student student:students){
+            student.addAssignment(assignment);
+        }
     }
     public void gradeAssignment(String assignment,String studentName, double grade)
     {
+        for(Student student:students)
+        {
+            if(studentName.equals(student.toString().split("-")[0])){
+                student.gradeAssignment(assignment,grade);
+            }
+        }
 
     }
     public double getAverageGrade(String assignment)
@@ -42,7 +50,14 @@ public class Gradebook {
     {
 
     }
-    public double getMinOverall
+    public double getMinOverall()
+    {
+
+    }
+    public double getStudentsGrade()
+    {
+
+    }
 
 
 
