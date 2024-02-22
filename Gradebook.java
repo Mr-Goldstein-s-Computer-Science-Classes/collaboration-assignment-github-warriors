@@ -25,17 +25,35 @@ public class Gradebook {
         for(Student student:students)
         {
             if(studentName.equals(student.toString().split("-")[0])){
-                student.gradeAssignment(assignment,grade);
+                student.gradeAssignment(assignment, grade);
+                break;
             }
         }
 
     }
     public double getAverageGrade(String assignment)
     {
-
+        double sum = 0;
+        int count = 0;
+        for(Student student:students)
+        {
+            sum += student.getAssignmentGrade(assignment);
+            count++;
+        }
+        if(count > 0){
+            return sum/count;
+        }
+        else{
+            return 0.0;
+        }
     }
-    public getMinimumGrade(String assignment)
+    public double getMinimumGrade(String assignment)
     {
+        double minGrade = Double.MAX_VALUE;
+        for(Student student: students)
+        {
+            double grade = student.getAssignmentGrade(assignment);
+        }
 
     }
     public double getMaximumGrade(String assignment)
